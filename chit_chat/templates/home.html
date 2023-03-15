@@ -1,0 +1,17 @@
+{% extends 'base.html'%}
+{% block body %}
+<div  class="head" align="center">
+    <h2>Chit_Chat</h2>
+</div>
+
+
+<div class="container" id="">
+    <form id="post-form" method="POST" action="view">
+        {% csrf_token %}
+        <input  type="text" placeholder="Room Name" name="room_name" id="room_name" width="100px" ><br>
+        <input type="text" placeholder="User Name" name="username" id="username" width="100px" >
+        <br>
+        <input type="submit" value="Enter Room">
+    </form>
+</div>
+{% endblock %}
